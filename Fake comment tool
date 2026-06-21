@@ -1,0 +1,892 @@
+<!-- === GENERATORE COMMENTO MULTI-PIATTAFORMA — HOSTINGER VERSION === -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<div class="wrap" id="cmt-gen" style="margin:0 auto;color:#fff;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;background:#000">
+
+  <style>
+    #cmt-gen{
+      --white:#ffffff;
+      --text:#0f172a;
+      --muted-2:#6b7280;
+      --card-shadow:0 14px 36px rgba(0,0,0,.22);
+      --radius:28px;
+      --stage-w:986px;
+      --stage-h:272px;
+
+      /* --- palette UI (dark elegante) --- */
+      --bg:#000000;
+      --panel:#0c0c0e;
+      --panel-2:#121215;
+      --line:rgba(255,255,255,.08);
+      --line-soft:rgba(255,255,255,.05);
+      --ink:#f5f5f7;
+      --ink-dim:#9a9aa3;
+      --accent:#7c5cff;
+      --accent-2:#a78bfa;
+      --accent-soft:rgba(124,92,255,.15);
+      --focus:0 0 0 3px rgba(124,92,255,.35);
+    }
+    #cmt-gen *{box-sizing:border-box}
+    #cmt-gen .shell{
+      max-width:1180px;margin:0 auto;padding:28px 20px 44px;
+    }
+    #cmt-gen .header{
+      display:flex;align-items:center;gap:12px;margin-bottom:22px;
+    }
+    #cmt-gen .header .dot{
+      width:10px;height:10px;border-radius:50%;
+      background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      box-shadow:0 0 14px var(--accent-soft);
+    }
+    #cmt-gen .header h1{
+      font-size:18px;font-weight:800;letter-spacing:.2px;margin:0;color:var(--ink);
+    }
+    #cmt-gen .header p{
+      margin:2px 0 0;font-size:13px;color:var(--ink-dim);
+    }
+
+    #cmt-gen .layout{
+      display:grid;
+      grid-template-columns: minmax(300px,420px) 1fr;
+      gap:20px;
+      align-items:start;
+    }
+    @media (max-width: 880px){
+      #cmt-gen .layout{grid-template-columns:1fr}
+    }
+
+    /* ---------- PANNELLO CONTROLLI ---------- */
+    #cmt-gen .panel{
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:18px;
+      box-shadow:0 1px 0 rgba(255,255,255,.03) inset, 0 18px 40px rgba(0,0,0,.45);
+    }
+
+    /* ---- selettore stile piattaforma ---- */
+    #cmt-gen .platform-select{
+      display:grid;grid-template-columns:repeat(4,1fr);gap:8px;
+      margin-bottom:14px;
+    }
+    #cmt-gen .platform-btn{
+      display:flex;flex-direction:column;align-items:center;gap:6px;
+      padding:12px 6px 10px;border-radius:13px;cursor:pointer;
+      border:1px solid var(--line);background:var(--panel-2);
+      color:var(--ink-dim);transition:all .15s ease;
+      font-size:11px;font-weight:700;
+    }
+    #cmt-gen .platform-btn .ic-wrap{
+      width:30px;height:30px;border-radius:9px;
+      display:flex;align-items:center;justify-content:center;
+      background:rgba(255,255,255,.06);
+    }
+    #cmt-gen .platform-btn svg{width:16px;height:16px}
+    #cmt-gen .platform-btn:hover{border-color:rgba(255,255,255,.22);color:var(--ink)}
+    #cmt-gen .platform-btn.active{
+      border-color:var(--accent);color:#fff;
+      background:linear-gradient(180deg, rgba(124,92,255,.18), rgba(124,92,255,.06));
+      box-shadow:0 0 0 1px rgba(124,92,255,.35) inset, 0 8px 18px rgba(124,92,255,.18);
+    }
+    #cmt-gen .platform-btn.active .ic-wrap{background:rgba(255,255,255,.14);color:#fff}
+    #cmt-gen .platform-btn[data-p="standard"].active .ic-wrap{color:var(--accent-2)}
+    #cmt-gen .platform-btn[data-p="youtube"].active .ic-wrap{color:#ff4d4d}
+    #cmt-gen .platform-btn[data-p="instagram"].active .ic-wrap{color:#e1306c}
+    #cmt-gen .platform-btn[data-p="tiktok"].active .ic-wrap{color:#69f0d1}
+
+    #cmt-gen .group{
+      border:1px solid var(--line-soft);
+      background:var(--panel-2);
+      border-radius:14px;
+      padding:14px;
+      margin-bottom:12px;
+    }
+    #cmt-gen .group-title{
+      font-size:11px;text-transform:uppercase;letter-spacing:.08em;
+      color:var(--ink-dim);font-weight:700;margin-bottom:10px;
+      display:flex;align-items:center;gap:6px;
+    }
+    #cmt-gen .group-title svg{width:14px;height:14px;opacity:.7}
+
+    #cmt-gen .field{margin-bottom:10px}
+    #cmt-gen .field:last-child{margin-bottom:0}
+    #cmt-gen label{
+      font-size:12px;color:var(--ink-dim);margin-bottom:6px;display:block;font-weight:600;
+    }
+    #cmt-gen .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    #cmt-gen .grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+
+    #cmt-gen input[type=text],
+    #cmt-gen input[type=number],
+    #cmt-gen textarea{
+      width:100%;padding:11px 12px;border-radius:11px;
+      border:1px solid var(--line);
+      background:#0a0a0c;
+      color:var(--ink);font-size:14px;font-family:inherit;
+      transition:border-color .15s ease, box-shadow .15s ease, background .15s ease;
+    }
+    #cmt-gen input::placeholder,#cmt-gen textarea::placeholder{color:#55555f}
+    #cmt-gen input:hover,#cmt-gen textarea:hover{border-color:rgba(255,255,255,.16)}
+    #cmt-gen input:focus,#cmt-gen textarea:focus{
+      outline:none;border-color:var(--accent);box-shadow:var(--focus);background:#0d0d10;
+    }
+    #cmt-gen textarea{min-height:78px;resize:vertical;line-height:1.4}
+
+    #cmt-gen .range-row{display:flex;align-items:center;gap:10px}
+    #cmt-gen input[type=range]{
+      -webkit-appearance:none;width:100%;height:4px;border-radius:4px;
+      background:var(--line);outline:none;
+    }
+    #cmt-gen input[type=range]::-webkit-slider-thumb{
+      -webkit-appearance:none;width:16px;height:16px;border-radius:50%;
+      background:var(--accent);cursor:pointer;border:2px solid #fff;
+      box-shadow:0 1px 4px rgba(0,0,0,.5);
+    }
+    #cmt-gen .range-val{
+      min-width:54px;text-align:right;font-size:12px;color:var(--ink-dim);
+      font-weight:700;font-variant-numeric:tabular-nums;
+    }
+
+    #cmt-gen .file-drop{
+      display:flex;align-items:center;gap:10px;
+      border:1px dashed var(--line);border-radius:11px;
+      padding:10px 12px;background:#0a0a0c;cursor:pointer;
+      transition:border-color .15s ease, background .15s ease;
+      position:relative;
+    }
+    #cmt-gen .file-drop:hover{border-color:var(--accent-2);background:#0d0d10}
+    #cmt-gen .file-drop input[type=file]{
+      position:absolute;inset:0;opacity:0;cursor:pointer;
+    }
+    #cmt-gen .file-drop .ic{
+      width:30px;height:30px;border-radius:8px;flex:0 0 30px;
+      background:var(--accent-soft);display:flex;align-items:center;justify-content:center;color:var(--accent-2);
+    }
+    #cmt-gen .file-drop .file-text{font-size:13px;color:var(--ink-dim)}
+    #cmt-gen .file-drop .file-text b{color:var(--ink);font-weight:700}
+    #cmt-gen .file-drop .clear-avatar{
+      margin-left:auto;font-size:12px;color:var(--ink-dim);
+      background:transparent;border:1px solid var(--line);border-radius:8px;
+      padding:5px 9px;cursor:pointer;position:relative;z-index:2;
+    }
+    #cmt-gen .file-drop .clear-avatar:hover{color:var(--ink);border-color:rgba(255,255,255,.25)}
+
+    #cmt-gen .actions{display:flex;gap:10px;margin-top:14px}
+    #cmt-gen .btn{
+      flex:1;border:none;padding:12px 14px;border-radius:12px;font-weight:700;font-size:14px;
+      cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;
+      transition:transform .12s ease, filter .12s ease, opacity .12s ease;
+    }
+    #cmt-gen .btn svg{width:16px;height:16px}
+    #cmt-gen .btn:active{transform:scale(.97)}
+    #cmt-gen .btn-primary{
+      background:linear-gradient(135deg,var(--accent),#6a48f0);color:#fff;
+      box-shadow:0 8px 20px rgba(124,92,255,.35);
+    }
+    #cmt-gen .btn-primary:hover{filter:brightness(1.08)}
+    #cmt-gen .btn-ghost{
+      background:transparent;color:var(--ink);border:1px solid var(--line);
+    }
+    #cmt-gen .btn-ghost:hover{border-color:rgba(255,255,255,.3);background:rgba(255,255,255,.04)}
+    #cmt-gen .btn-download{
+      width:100%;margin-top:10px;
+      background:var(--ink);color:#0a0a0c;
+    }
+    #cmt-gen .btn-download:hover{filter:brightness(.94)}
+
+    /* ---------- LATO PREVIEW ---------- */
+    #cmt-gen .preview-col{position:sticky;top:20px}
+    #cmt-gen .preview-panel{
+      background:radial-gradient(circle at 30% 20%, #141417, #050506 70%);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:28px 20px 22px;
+      display:flex;flex-direction:column;align-items:center;
+      min-height:340px;
+      justify-content:center;
+      position:relative;
+      overflow:hidden;
+      transition:background .25s ease;
+    }
+    #cmt-gen .preview-panel.bg-light{
+      background:radial-gradient(circle at 30% 20%, #2a2a2e, #0d0d0f 70%);
+    }
+    #cmt-gen .preview-badge{
+      position:absolute;top:14px;left:16px;
+      font-size:11px;text-transform:uppercase;letter-spacing:.08em;
+      color:var(--ink-dim);font-weight:700;
+      display:flex;align-items:center;gap:6px;
+    }
+    #cmt-gen .preview-badge .live-dot{
+      width:7px;height:7px;border-radius:50%;background:#34d399;
+      box-shadow:0 0 8px rgba(52,211,153,.7);
+      animation:pulse 1.8s ease-in-out infinite;
+    }
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+
+    #cmt-gen .size-tag{
+      position:absolute;top:14px;right:16px;
+      font-size:11px;color:var(--ink-dim);
+      background:rgba(255,255,255,.05);border:1px solid var(--line);
+      padding:4px 9px;border-radius:999px;font-weight:600;
+      font-variant-numeric:tabular-nums;
+    }
+
+    #cmt-gen .stage{
+      width:var(--stage-w);height:var(--stage-h);
+      display:flex;justify-content:center;align-items:center;
+      margin-inline:auto;position:relative;
+      max-width:100%;
+      transition:background .2s ease;
+    }
+    #cmt-gen .stage.bg-white{background:#ffffff}
+    #cmt-gen .stage.bg-black{background:#000000}
+    #cmt-gen .stage.bg-transparent{
+      background:
+        linear-gradient(45deg, rgba(255,255,255,.06) 25%, transparent 25%) -8px 0/16px 16px,
+        linear-gradient(-45deg, rgba(255,255,255,.06) 25%, transparent 25%) -8px 0/16px 16px,
+        linear-gradient(45deg, transparent 75%, rgba(255,255,255,.06) 75%) -8px 0/16px 16px,
+        linear-gradient(-45deg, transparent 75%, rgba(255,255,255,.06) 75%) -8px 0/16px 16px,
+        #1a1a1d;
+    }
+    /* riquadro bianco "aderente al contenuto" solo per la preview a schermo
+       di stili senza card propria (YouTube/Instagram): simula il feed
+       bianco dell'app senza riempire tutto lo spazio export fisso */
+    #cmt-gen .stage.bg-transparent .content-wrap{
+      background:#ffffff;border-radius:14px;
+      padding:14px 18px;
+      box-shadow:0 10px 30px rgba(0,0,0,.35);
+      display:inline-flex;
+    }
+    #cmt-gen .stage.bg-transparent.exporting{background:transparent !important}
+    #cmt-gen .stage.bg-transparent.exporting .content-wrap{
+      background:transparent;box-shadow:none;padding:0;
+    }
+
+    #cmt-gen .stage-scale{
+      max-width:100%;
+      transform-origin:center center;
+    }
+
+    /* =======================================================
+       STILE: STANDARD (card bianca, ombra — invariato)
+    ======================================================= */
+    #cmt-gen .card.style-standard{
+      background:var(--white);color:var(--text);
+      border-radius:var(--radius);
+      box-shadow:var(--card-shadow);
+      padding:16px 22px;
+      display:flex;gap:14px;align-items:flex-start;
+      max-width:100%;
+    }
+    #cmt-gen .card.style-standard .avatar{
+      width:46px;height:46px;border-radius:50%;
+      flex:0 0 46px;overflow:hidden;
+      display:flex;align-items:center;justify-content:center;
+      font-weight:900;
+    }
+    #cmt-gen .card.style-standard .avatar img{width:100%;height:100%;object-fit:cover}
+    #cmt-gen .card.style-standard .avatar .initial{font-size:28px;line-height:1}
+    #cmt-gen .card.style-standard .body{flex:1;min-width:0}
+    #cmt-gen .card.style-standard .name{color:var(--muted-2);font-weight:800;letter-spacing:.2px}
+    #cmt-gen .card.style-standard .text{
+      margin-top:6px;line-height:1.35;font-size:18px;white-space:pre-wrap;
+    }
+    #cmt-gen .card.style-standard .meta{
+      margin-top:10px;display:flex;align-items:center;justify-content:space-between;
+      color:var(--muted-2);font-weight:600;
+    }
+    #cmt-gen .card.style-standard .meta-left{display:flex;align-items:center;gap:8px}
+    #cmt-gen .card.style-standard .likes{display:inline-flex;align-items:center;gap:8px}
+    #cmt-gen .card.style-standard .likes svg{width:22px;height:22px}
+
+    /* =======================================================
+       STILE: YOUTUBE
+       avatar + nome/tempo sulla stessa riga, testo sotto,
+       riga azioni: like (thumb-up) numero, dislike, Rispondi
+    ======================================================= */
+    #cmt-gen .card.style-youtube{
+      font-family:Roboto,Arial,sans-serif;
+      background:transparent;color:#0f0f0f;
+      display:flex;gap:12px;align-items:flex-start;
+      padding:8px 4px;max-width:100%;
+    }
+    #cmt-gen .card.style-youtube .avatar{
+      width:40px;height:40px;border-radius:50%;flex:0 0 40px;overflow:hidden;
+      display:flex;align-items:center;justify-content:center;font-weight:700;
+    }
+    #cmt-gen .card.style-youtube .avatar img{width:100%;height:100%;object-fit:cover}
+    #cmt-gen .card.style-youtube .avatar .initial{font-size:18px;line-height:1;color:#fff}
+    #cmt-gen .card.style-youtube .body{flex:1;min-width:0}
+    #cmt-gen .card.style-youtube .top{display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
+    #cmt-gen .card.style-youtube .name{font-size:13px;font-weight:500;color:#0f0f0f}
+    #cmt-gen .card.style-youtube .when{font-size:12px;color:#606060;font-weight:400}
+    #cmt-gen .card.style-youtube .text{
+      margin-top:2px;font-size:14px;line-height:1.4;color:#0f0f0f;white-space:pre-wrap;
+    }
+    #cmt-gen .card.style-youtube .meta{
+      margin-top:8px;display:flex;align-items:center;gap:16px;color:#606060;
+    }
+    #cmt-gen .card.style-youtube .yt-action{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:500}
+    #cmt-gen .card.style-youtube .yt-action svg{width:18px;height:18px;stroke:#606060}
+    #cmt-gen .card.style-youtube .reply{font-size:12px;font-weight:700;letter-spacing:.3px;color:#606060;text-transform:uppercase}
+
+    /* =======================================================
+       STILE: INSTAGRAM
+       nome in grassetto + testo inline sulla stessa riga,
+       tempo/Rispondi/like-count sotto, cuore a destra in verticale
+    ======================================================= */
+    #cmt-gen .card.style-instagram{
+      font-family:-apple-system,Helvetica,Arial,sans-serif;
+      background:transparent;color:#262626;
+      display:flex;gap:12px;align-items:flex-start;
+      padding:6px 4px;max-width:100%;
+    }
+    #cmt-gen .card.style-instagram .avatar{
+      width:32px;height:32px;border-radius:50%;flex:0 0 32px;overflow:hidden;
+      display:flex;align-items:center;justify-content:center;font-weight:700;
+    }
+    #cmt-gen .card.style-instagram .avatar img{width:100%;height:100%;object-fit:cover}
+    #cmt-gen .card.style-instagram .avatar .initial{font-size:14px;line-height:1;color:#fff}
+    #cmt-gen .card.style-instagram .body{flex:1;min-width:0}
+    #cmt-gen .card.style-instagram .text-line{font-size:14px;line-height:1.45;color:#262626}
+    #cmt-gen .card.style-instagram .text-line .name{font-weight:600;margin-right:5px}
+    #cmt-gen .card.style-instagram .text-line .ig-text{white-space:pre-wrap}
+    #cmt-gen .card.style-instagram .meta{
+      margin-top:6px;display:flex;align-items:center;gap:14px;color:#8e8e8e;font-size:12px;
+    }
+    #cmt-gen .card.style-instagram .reply{font-weight:600;color:#8e8e8e}
+    #cmt-gen .card.style-instagram .ig-likecount{font-weight:600;color:#8e8e8e;font-size:12px;margin-top:4px}
+    #cmt-gen .card.style-instagram .heart-col{
+      flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:3px;
+      padding-top:4px;
+    }
+    #cmt-gen .card.style-instagram .heart-col svg{width:13px;height:13px;stroke:#262626;fill:none}
+
+    /* =======================================================
+       STILE: TIKTOK (card bianca arrotondata su sfondo nero —
+       stesso stile "Standard" ma è quello iconico TikTok)
+    ======================================================= */
+    #cmt-gen .card.style-tiktok{
+      background:var(--white);color:#161823;
+      border-radius:14px;
+      padding:14px 18px;
+      display:flex;gap:12px;align-items:flex-start;
+      max-width:100%;
+      box-shadow:0 8px 24px rgba(0,0,0,.18);
+    }
+    #cmt-gen .card.style-tiktok .avatar{
+      width:42px;height:42px;border-radius:50%;flex:0 0 42px;overflow:hidden;
+      display:flex;align-items:center;justify-content:center;font-weight:800;
+    }
+    #cmt-gen .card.style-tiktok .avatar img{width:100%;height:100%;object-fit:cover}
+    #cmt-gen .card.style-tiktok .avatar .initial{font-size:22px;line-height:1;color:#fff}
+    #cmt-gen .card.style-tiktok .body{flex:1;min-width:0}
+    #cmt-gen .card.style-tiktok .name{font-size:13px;font-weight:600;color:#161823;opacity:.55}
+    #cmt-gen .card.style-tiktok .text{margin-top:4px;font-size:15px;line-height:1.4;color:#161823;white-space:pre-wrap}
+    #cmt-gen .card.style-tiktok .meta{margin-top:8px;display:flex;align-items:center;justify-content:space-between;color:#161823;opacity:.55;font-size:12px;font-weight:500}
+    #cmt-gen .card.style-tiktok .meta-left{display:flex;align-items:center;gap:8px}
+    #cmt-gen .card.style-tiktok .likes{display:inline-flex;flex-direction:column;align-items:center;gap:2px}
+    #cmt-gen .card.style-tiktok .likes svg{width:18px;height:18px}
+    #cmt-gen .card.style-tiktok .likes span{font-size:11px}
+
+    #cmt-gen .toast{
+      position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(12px);
+      background:var(--ink);color:#0a0a0c;font-weight:700;font-size:13px;
+      padding:10px 16px;border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,.4);
+      opacity:0;pointer-events:none;transition:opacity .2s ease, transform .2s ease;
+      z-index:9999;
+    }
+    #cmt-gen .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+    #cmt-gen [data-only]{display:none}
+  </style>
+
+  <div class="shell">
+
+    <div class="header">
+      <span class="dot"></span>
+      <div>
+        <h1>Generatore Commento Social</h1>
+        <p>Scegli lo stile, personalizza e scarica l'immagine in PNG</p>
+      </div>
+    </div>
+
+    <div class="layout">
+
+      <!-- ============== COLONNA CONTROLLI ============== -->
+      <div class="panel">
+
+        <div class="platform-select" id="platformSelect">
+          <div class="platform-btn active" data-p="standard">
+            <div class="ic-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M7 8h10M7 12h10M7 16h6"/></svg>
+            </div>
+            Standard
+          </div>
+          <div class="platform-btn" data-p="youtube">
+            <div class="ic-wrap">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg>
+            </div>
+            YouTube
+          </div>
+          <div class="platform-btn" data-p="instagram">
+            <div class="ic-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </div>
+            Instagram
+          </div>
+          <div class="platform-btn" data-p="tiktok">
+            <div class="ic-wrap">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.82a4.27 4.27 0 0 1-2.55-4.07h-3.18v14.6a2.59 2.59 0 1 1-2.59-2.59c.17 0 .33.01.49.04v-3.18a5.76 5.76 0 0 0-.49-.02 5.78 5.78 0 1 0 5.78 5.78V9.4a7.46 7.46 0 0 0 4.36 1.39V7.6a4.27 4.27 0 0 1-1.82-1.78z"/></svg>
+            </div>
+            TikTok
+          </div>
+        </div>
+
+        <div class="group">
+          <div class="group-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Profilo
+          </div>
+          <div class="field">
+            <label>Nome utente</label>
+            <input type="text" id="name" value="LAEMY" placeholder="es. MARIO_98" />
+          </div>
+          <div class="field">
+            <label>Foto profilo (opzionale)</label>
+            <div class="file-drop" id="fileDrop">
+              <div class="ic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+              </div>
+              <div class="file-text"><b>Carica immagine</b> oppure usa iniziali</div>
+              <button class="clear-avatar" id="clearAvatar" type="button">Rimuovi</button>
+              <input type="file" id="avatar" accept="image/*" />
+            </div>
+          </div>
+        </div>
+
+        <div class="group">
+          <div class="group-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Commento
+          </div>
+          <div class="field">
+            <label>Testo</label>
+            <textarea id="text" placeholder="Scrivi il commento...">Ma scusa dopo che fai queste pokè
+le butti?</textarea>
+          </div>
+          <div class="grid-2">
+            <div class="field">
+              <label>Data</label>
+              <input type="text" id="date" value="8-2" placeholder="es. 8-2" />
+            </div>
+            <div class="field">
+              <label>Like</label>
+              <input type="text" id="likes" value="15" placeholder="es. 15" />
+            </div>
+          </div>
+          <div class="field" data-only="youtube">
+            <label>Dislike (solo YouTube)</label>
+            <input type="text" id="dislikes" value="0" placeholder="es. 0" />
+          </div>
+        </div>
+
+        <div class="group">
+          <div class="group-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18.7 8a2 2 0 1 0-2.83 0L13 11.83l-2.83-2.83a2 2 0 1 0-2.83 0"/></svg>
+            Dimensioni immagine
+          </div>
+          <div class="field">
+            <div class="range-row">
+              <label style="margin:0;min-width:70px">Larghezza</label>
+              <input type="range" id="widthPx" min="400" max="1400" value="986" />
+              <span class="range-val" id="widthVal">986 px</span>
+            </div>
+          </div>
+          <div class="field">
+            <div class="range-row">
+              <label style="margin:0;min-width:70px">Altezza</label>
+              <input type="range" id="heightPx" min="120" max="700" value="272" />
+              <span class="range-val" id="heightVal">272 px</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-primary" id="randomize" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+            Randomizza
+          </button>
+          <button class="btn btn-ghost" id="resetBtn" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><polyline points="3 3 3 8 8 8"/></svg>
+            Reset
+          </button>
+        </div>
+        <button class="btn btn-download" id="download" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Scarica PNG
+        </button>
+
+      </div>
+
+      <!-- ============== COLONNA PREVIEW ============== -->
+      <div class="preview-col">
+        <div class="preview-panel" id="previewPanel">
+          <div class="preview-badge"><span class="live-dot"></span> Anteprima live</div>
+          <div class="size-tag" id="sizeTag">986×272</div>
+
+          <div class="stage bg-transparent" id="stage" data-size="986×272">
+            <div class="stage-scale" id="stageScale">
+
+              <!-- ===== STANDARD ===== -->
+              <div class="card style-standard" id="card-standard">
+                <div class="avatar" id="avatarCircle-standard"><span class="initial">LA</span></div>
+                <div class="body">
+                  <div class="top"><div class="name" id="outName-standard">LAEMY</div></div>
+                  <div class="text" id="outText-standard">Ma scusa dopo che fai queste pokè
+le butti?</div>
+                  <div class="meta">
+                    <div class="meta-left">
+                      <div class="when" id="outDate-standard">8-2</div>
+                      <span class="dot">·</span>
+                      <div class="reply">Rispondi</div>
+                    </div>
+                    <div class="likes">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                      <span id="outLikes-standard">15</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ===== YOUTUBE ===== -->
+              <div class="content-wrap" id="wrap-youtube" style="display:none">
+              <div class="card style-youtube" id="card-youtube">
+                <div class="avatar" id="avatarCircle-youtube"><span class="initial">LA</span></div>
+                <div class="body">
+                  <div class="top">
+                    <span class="name" id="outName-youtube">@laemy</span>
+                    <span class="when" id="outDate-youtube">8-2</span>
+                  </div>
+                  <div class="text" id="outText-youtube">Ma scusa dopo che fai queste pokè
+le butti?</div>
+                  <div class="meta">
+                    <span class="yt-action">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z"/></svg>
+                      <span id="outLikes-youtube">15</span>
+                    </span>
+                    <span class="yt-action">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform:scaleX(-1) scaleY(-1)"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z"/></svg>
+                    </span>
+                    <span class="reply">Rispondi</span>
+                  </div>
+                </div>
+              </div>
+              </div>
+
+              <!-- ===== INSTAGRAM ===== -->
+              <div class="content-wrap" id="wrap-instagram" style="display:none">
+              <div class="card style-instagram" id="card-instagram">
+                <div class="avatar" id="avatarCircle-instagram"><span class="initial">LA</span></div>
+                <div class="body">
+                  <div class="text-line">
+                    <span class="name" id="outName-instagram">laemy</span><span class="ig-text" id="outText-instagram">Ma scusa dopo che fai queste pokè
+le butti?</span>
+                  </div>
+                  <div class="meta">
+                    <span id="outDate-instagram">8 g</span>
+                    <span class="reply">Rispondi</span>
+                  </div>
+                </div>
+                <div class="heart-col">
+                  <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                  <span id="outLikes-instagram" style="font-size:11px;color:#8e8e8e">15</span>
+                </div>
+              </div>
+              </div>
+
+              <!-- ===== TIKTOK ===== -->
+              <div class="card style-tiktok" id="card-tiktok" style="display:none">
+                <div class="avatar" id="avatarCircle-tiktok"><span class="initial">LA</span></div>
+                <div class="body">
+                  <div class="name" id="outName-tiktok">laemy</div>
+                  <div class="text" id="outText-tiktok">Ma scusa dopo che fai queste pokè
+le butti?</div>
+                  <div class="meta">
+                    <div class="meta-left">
+                      <span id="outDate-tiktok">8-2</span>
+                      <span>·</span>
+                      <span>Rispondi</span>
+                    </div>
+                    <div class="likes">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                      <span id="outLikes-tiktok">15</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="toast" id="toast">PNG scaricata ✓</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script>
+  (function(){
+    const root=document.getElementById('cmt-gen');
+    const elName=root.querySelector('#name');
+    const elDate=root.querySelector('#date');
+    const elLikes=root.querySelector('#likes');
+    const elDislikes=root.querySelector('#dislikes');
+    const elText=root.querySelector('#text');
+    const avatarInput=root.querySelector('#avatar');
+    const stage=root.querySelector('#stage');
+    const stageScale=root.querySelector('#stageScale');
+    const widthPx=root.querySelector('#widthPx');
+    const heightPx=root.querySelector('#heightPx');
+    const widthVal=root.querySelector('#widthVal');
+    const heightVal=root.querySelector('#heightVal');
+    const sizeTag=root.querySelector('#sizeTag');
+    const clearAvatarBtn=root.querySelector('#clearAvatar');
+    const toast=root.querySelector('#toast');
+    const previewPanel=root.querySelector('#previewPanel');
+    const platformSelect=root.querySelector('#platformSelect');
+
+    const PLATFORMS=['standard','youtube','instagram','tiktok'];
+    let currentPlatform='standard';
+    let currentHue=Math.floor(Math.random()*360);
+    let hasCustomAvatar=false;
+    let avatarDataUrl=null;
+
+    const DEFAULTS={
+      name:'LAEMY', date:'8-2', likes:'15', dislikes:'0',
+      text:'Ma scusa dopo che fai queste pokè\nle butti?',
+      width:986, height:272
+    };
+
+    function initialsFrom(name){return (name||'U').replace('@','').split(' ').map(s=>s[0]||'').slice(0,2).join('').toUpperCase();}
+
+    function setAvatarColorFromHue(circle,h){
+      const bg=`hsl(${h} 80% 55%)`;
+      const fg=`hsl(${h} 80% 28%)`;
+      circle.style.background=bg;
+      const span=circle.querySelector('.initial');
+      if(span) span.style.color=fg;
+    }
+    function rerollAvatarColor(){currentHue=Math.floor(Math.random()*360);}
+
+    function fitStage(){
+      const availableW = previewPanel.clientWidth - 40;
+      const w = parseInt(widthPx.value,10);
+      const scale = Math.min(1, availableW / w);
+      stageScale.style.transform = `scale(${scale})`;
+      stage.style.height = (parseInt(heightPx.value,10) * scale) + 'px';
+    }
+
+    function applyAvatarToAll(){
+      PLATFORMS.forEach(p=>{
+        const circle=root.querySelector('#avatarCircle-'+p);
+        if(!circle) return;
+        if(hasCustomAvatar && avatarDataUrl){
+          circle.innerHTML='<img src="'+avatarDataUrl+'" alt="avatar" />';
+        }else{
+          const nameRaw = root.querySelector('#name').value;
+          circle.innerHTML=`<span class='initial'>${initialsFrom(nameRaw)}</span>`;
+          setAvatarColorFromHue(circle, currentHue);
+        }
+      });
+    }
+
+    function update(){
+      const name=elName.value.trim()||'Utente';
+      const date=elDate.value.trim()||'';
+      const likes=elLikes.value.trim()||'0';
+      const dislikes=elDislikes.value.trim()||'0';
+      const text=elText.value||'';
+
+      // STANDARD
+      root.querySelector('#outName-standard').textContent=name;
+      root.querySelector('#outDate-standard').textContent=date;
+      root.querySelector('#outLikes-standard').textContent=likes;
+      root.querySelector('#outText-standard').innerText=text;
+
+      // YOUTUBE (nome stile @handle minuscolo)
+      const ytHandle = name.startsWith('@') ? name : '@'+name.toLowerCase().replace(/\s+/g,'');
+      root.querySelector('#outName-youtube').textContent=ytHandle;
+      root.querySelector('#outDate-youtube').textContent=date;
+      root.querySelector('#outLikes-youtube').textContent=likes;
+      root.querySelector('#outText-youtube').innerText=text;
+
+      // INSTAGRAM (nome minuscolo senza spazi, come username)
+      const igHandle = name.toLowerCase().replace(/\s+/g,'');
+      root.querySelector('#outName-instagram').textContent=igHandle;
+      root.querySelector('#outText-instagram').innerText=text;
+      root.querySelector('#outDate-instagram').textContent=date;
+      root.querySelector('#outLikes-instagram').textContent=likes;
+
+      // TIKTOK
+      root.querySelector('#outName-tiktok').textContent=name;
+      root.querySelector('#outDate-tiktok').textContent=date;
+      root.querySelector('#outLikes-tiktok').textContent=likes;
+      root.querySelector('#outText-tiktok').innerText=text;
+
+      applyAvatarToAll();
+
+      const w=widthPx.value, h=heightPx.value;
+      stage.style.setProperty('--stage-w',w+'px');
+      stage.style.setProperty('--stage-h',h+'px');
+      stage.setAttribute('data-size',`${w}×${h}`);
+      widthVal.textContent=w+' px';
+      heightVal.textContent=h+' px';
+      sizeTag.textContent=`${w}×${h}`;
+
+      fitStage();
+    }
+
+    function setPlatform(p){
+      currentPlatform=p;
+      PLATFORMS.forEach(name=>{
+        const card=root.querySelector('#card-'+name);
+        const wrap=root.querySelector('#wrap-'+name);
+        const el = wrap || card; // youtube/instagram hanno un wrapper, standard/tiktok no
+        if(el) el.style.display = (name===p) ? (wrap ? 'inline-flex' : 'flex') : 'none';
+      });
+      platformSelect.querySelectorAll('.platform-btn').forEach(btn=>{
+        btn.classList.toggle('active', btn.dataset.p===p);
+      });
+      // sfondo dello stage: sempre scacchiera trasparente in anteprima
+      // (le card mantengono il proprio sfondo bianco/colorato, lo stage
+      // dietro serve solo a far capire visivamente cosa è trasparente)
+      stage.classList.remove('bg-white','bg-black');
+      stage.classList.add('bg-transparent');
+
+      // mostra/nascondi campi specifici (es. dislike solo YouTube)
+      root.querySelectorAll('[data-only]').forEach(el=>{
+        el.style.display = (el.dataset.only===p) ? 'block' : 'none';
+      });
+
+      update();
+    }
+
+    platformSelect.querySelectorAll('.platform-btn').forEach(btn=>{
+      btn.addEventListener('click', ()=> setPlatform(btn.dataset.p));
+    });
+
+    [elName, elDate, elLikes, elDislikes, elText].forEach(inp=>{
+      inp.addEventListener('input', update);
+    });
+    [widthPx, heightPx].forEach(inp=>{
+      inp.addEventListener('input', update);
+    });
+
+    avatarInput.addEventListener('change', e=>{
+      const f=e.target.files[0];
+      if(!f){
+        hasCustomAvatar=false; avatarDataUrl=null;
+        update();
+        return;
+      }
+      const r=new FileReader();
+      r.onload=()=>{
+        hasCustomAvatar=true;
+        avatarDataUrl=r.result;
+        update();
+      };
+      r.readAsDataURL(f);
+    });
+
+    clearAvatarBtn.addEventListener('click', (e)=>{
+      e.preventDefault(); e.stopPropagation();
+      avatarInput.value='';
+      hasCustomAvatar=false; avatarDataUrl=null;
+      update();
+    });
+
+    function randomInt(min,max){return Math.floor(Math.random()*(max-min+1))+min;}
+    function randomUsername(){
+      const first=['laura','mario','sofia','nicolo','giulia','irene','tommi','andre','federico','chiara','kevin','mattia','samuele','giada','alex','leon','francy','bea','nico','vale'];
+      const extra=['_','.', '', 'x','__','-'];
+      const tail=['01','2000','98','_tv','real','official','_yt','pro','_design','_it','x'];
+      const base=first[randomInt(0,first.length-1)];
+      const sep=extra[randomInt(0,extra.length-1)];
+      const maybeTail=Math.random()<0.7?tail[randomInt(0,tail.length-1)]:'';
+      return (Math.random()<0.5?base:base.toUpperCase())+sep+maybeTail;
+    }
+    function randomDateLast30(){
+      const now=new Date();const back=randomInt(0,30);
+      const d=new Date(now.getTime()-back*24*60*60*1000);
+      return `${d.getDate()}-${d.getMonth()+1}`;
+    }
+    function randomize(){
+      elName.value=randomUsername();
+      elDate.value=randomDateLast30();
+      elLikes.value=String(randomInt(0,2000));
+      elDislikes.value=String(randomInt(0,50));
+      rerollAvatarColor();
+      hasCustomAvatar=false; avatarDataUrl=null; avatarInput.value='';
+      update();
+    }
+    root.querySelector('#randomize').addEventListener('click', randomize);
+
+    root.querySelector('#resetBtn').addEventListener('click', ()=>{
+      elName.value=DEFAULTS.name;
+      elDate.value=DEFAULTS.date;
+      elLikes.value=DEFAULTS.likes;
+      elDislikes.value=DEFAULTS.dislikes;
+      elText.value=DEFAULTS.text;
+      widthPx.value=DEFAULTS.width;
+      heightPx.value=DEFAULTS.height;
+      avatarInput.value='';
+      hasCustomAvatar=false; avatarDataUrl=null;
+      update();
+    });
+
+    function showToast(msg){
+      toast.textContent=msg;
+      toast.classList.add('show');
+      setTimeout(()=>toast.classList.remove('show'), 1800);
+    }
+
+    root.querySelector('#download').addEventListener('click', async ()=>{
+      const prevTransform=stageScale.style.transform;
+      const prevStageClasses = stage.className;
+      stageScale.style.transform='none';
+      stage.style.height = heightPx.value + 'px';
+      // rimuovo qualsiasi sfondo dello stage solo per l'export
+      // (incluso l'effetto scacchiera usato in anteprima),
+      // così il PNG risulta realmente trasparente
+      stage.classList.remove('bg-white','bg-black','bg-transparent');
+      // per YouTube/Instagram, in export tolgo anche il riquadro bianco
+      // "finto schermo" usato solo per la leggibilità in anteprima
+      if(currentPlatform==='youtube' || currentPlatform==='instagram'){
+        stage.classList.add('exporting');
+      }
+      try{
+        const canvas=await html2canvas(stage,{backgroundColor:null,scale:2,useCORS:true});
+        canvas.toBlob(blob=>{
+          const a=document.createElement('a');
+          a.href=URL.createObjectURL(blob);
+          a.download='comment-'+currentPlatform+'.png';
+          a.click();
+          showToast('PNG scaricata ✓');
+        });
+      } finally {
+        stage.className=prevStageClasses;
+        stageScale.style.transform=prevTransform;
+        fitStage();
+      }
+    });
+
+    window.addEventListener('resize', fitStage);
+
+    setPlatform('standard');
+  })();
+  </script>
+</div>
