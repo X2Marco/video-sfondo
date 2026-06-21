@@ -1,0 +1,207 @@
+<!-- === GENERATORE COMMENTO MULTI-PIATTAFORMA — VERSIONE OTTIMIZZATA HOSTINGER === -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<div id="cmt-gen">
+  <style>
+    #cmt-gen{
+      --bg:#000;--panel:#0c0c0e;--panel2:#121215;--line:rgba(255,255,255,.08);--soft:rgba(255,255,255,.05);
+      --ink:#f5f5f7;--dim:#9a9aa3;--accent:#7c5cff;--accent2:#a78bfa;--focus:0 0 0 3px rgba(124,92,255,.35);
+      --stage-w:986px;--stage-h:272px;margin:0 auto;background:#000;color:#fff;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;
+    }
+    #cmt-gen *{box-sizing:border-box}
+    #cmt-gen .shell{max-width:1180px;margin:auto;padding:28px 20px 44px}
+    #cmt-gen .header{display:flex;align-items:center;gap:12px;margin-bottom:22px}
+    #cmt-gen .dot-ui{width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 0 14px rgba(124,92,255,.35)}
+    #cmt-gen h1{font-size:18px;margin:0;font-weight:800;color:var(--ink)}
+    #cmt-gen p{margin:2px 0 0;font-size:13px;color:var(--dim)}
+    #cmt-gen .layout{display:grid;grid-template-columns:minmax(300px,420px) 1fr;gap:20px;align-items:start}
+    @media(max-width:880px){#cmt-gen .layout{grid-template-columns:1fr}#cmt-gen .preview-col{position:static!important}}
+
+    #cmt-gen .panel,#cmt-gen .preview-panel{background:var(--panel);border:1px solid var(--line);border-radius:20px;box-shadow:0 1px 0 rgba(255,255,255,.03) inset,0 18px 40px rgba(0,0,0,.45)}
+    #cmt-gen .panel{padding:18px}
+    #cmt-gen .preview-col{position:sticky;top:20px}
+    #cmt-gen .preview-panel{min-height:340px;padding:28px 20px 22px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:radial-gradient(circle at 30% 20%,#141417,#050506 70%)}
+    #cmt-gen .badge,#cmt-gen .size-tag{position:absolute;top:14px;font-size:11px;color:var(--dim);font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    #cmt-gen .badge{left:16px;display:flex;gap:6px;align-items:center}.size-tag{right:16px;background:rgba(255,255,255,.05);border:1px solid var(--line);padding:4px 9px;border-radius:999px;text-transform:none;letter-spacing:0}
+    #cmt-gen .live{width:7px;height:7px;border-radius:50%;background:#34d399;box-shadow:0 0 8px rgba(52,211,153,.7);animation:pulse 1.8s infinite}@keyframes pulse{50%{opacity:.35}}
+
+    #cmt-gen .platforms{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}
+    #cmt-gen .platform-btn{display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px 6px 10px;border-radius:13px;cursor:pointer;border:1px solid var(--line);background:var(--panel2);color:var(--dim);transition:.15s;font-size:11px;font-weight:700}
+    #cmt-gen .platform-btn:hover{border-color:rgba(255,255,255,.22);color:var(--ink)}
+    #cmt-gen .platform-btn.active{border-color:var(--accent);color:#fff;background:linear-gradient(180deg,rgba(124,92,255,.18),rgba(124,92,255,.06));box-shadow:0 0 0 1px rgba(124,92,255,.35) inset,0 8px 18px rgba(124,92,255,.18)}
+    #cmt-gen .ic-wrap{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:rgba(255,255,255,.06)}
+    #cmt-gen svg{width:16px;height:16px}
+
+    #cmt-gen .group{border:1px solid var(--soft);background:var(--panel2);border-radius:14px;padding:14px;margin-bottom:12px}
+    #cmt-gen .group-title{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);font-weight:700;margin-bottom:10px;display:flex;gap:6px;align-items:center}
+    #cmt-gen .field{margin-bottom:10px}.field:last-child{margin-bottom:0}
+    #cmt-gen label{display:block;margin-bottom:6px;font-size:12px;color:var(--dim);font-weight:600}
+    #cmt-gen .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    #cmt-gen input[type=text],#cmt-gen textarea{width:100%;padding:11px 12px;border-radius:11px;border:1px solid var(--line);background:#0a0a0c;color:var(--ink);font-size:14px;font-family:inherit;transition:.15s}
+    #cmt-gen textarea{min-height:78px;resize:vertical;line-height:1.4}#cmt-gen input::placeholder,#cmt-gen textarea::placeholder{color:#55555f}
+    #cmt-gen input:hover,#cmt-gen textarea:hover{border-color:rgba(255,255,255,.16)}#cmt-gen input:focus,#cmt-gen textarea:focus{outline:0;border-color:var(--accent);box-shadow:var(--focus);background:#0d0d10}
+    #cmt-gen .range-row{display:flex;align-items:center;gap:10px}#cmt-gen .range-row label{margin:0;min-width:70px}
+    #cmt-gen input[type=range]{-webkit-appearance:none;width:100%;height:4px;border-radius:4px;background:var(--line);outline:0}
+    #cmt-gen input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;border-radius:50%;background:var(--accent);border:2px solid #fff;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+    #cmt-gen .range-val{min-width:54px;text-align:right;font-size:12px;color:var(--dim);font-weight:700;font-variant-numeric:tabular-nums}
+    #cmt-gen .file-drop{position:relative;display:flex;align-items:center;gap:10px;border:1px dashed var(--line);border-radius:11px;padding:10px 12px;background:#0a0a0c;cursor:pointer;transition:.15s}
+    #cmt-gen .file-drop:hover{border-color:var(--accent2);background:#0d0d10}#cmt-gen .file-drop input{position:absolute;inset:0;opacity:0;cursor:pointer}
+    #cmt-gen .upload-ic{width:30px;height:30px;border-radius:8px;display:grid;place-items:center;background:rgba(124,92,255,.15);color:var(--accent2);flex:0 0 30px}
+    #cmt-gen .file-text{font-size:13px;color:var(--dim)}#cmt-gen .file-text b{color:var(--ink)}
+    #cmt-gen .clear-avatar{margin-left:auto;font-size:12px;color:var(--dim);background:transparent;border:1px solid var(--line);border-radius:8px;padding:5px 9px;cursor:pointer;position:relative;z-index:2}
+    #cmt-gen .actions{display:flex;gap:10px;margin-top:14px}#cmt-gen .btn{flex:1;border:0;padding:12px 14px;border-radius:12px;font-weight:700;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:.12s}
+    #cmt-gen .btn:active{transform:scale(.97)}#cmt-gen .primary{background:linear-gradient(135deg,var(--accent),#6a48f0);color:#fff;box-shadow:0 8px 20px rgba(124,92,255,.35)}#cmt-gen .primary:hover{filter:brightness(1.08)}
+    #cmt-gen .ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}#cmt-gen .ghost:hover{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.3)}
+    #cmt-gen .download{width:100%;margin-top:10px;background:var(--ink);color:#0a0a0c}#cmt-gen .download[disabled]{opacity:.65;cursor:wait}
+
+    #cmt-gen .stage{width:var(--stage-w);height:var(--stage-h);display:flex;justify-content:center;align-items:center;max-width:100%;position:relative;background:linear-gradient(45deg,rgba(255,255,255,.06) 25%,transparent 25%) -8px 0/16px 16px,linear-gradient(-45deg,rgba(255,255,255,.06) 25%,transparent 25%) -8px 0/16px 16px,linear-gradient(45deg,transparent 75%,rgba(255,255,255,.06) 75%) -8px 0/16px 16px,linear-gradient(-45deg,transparent 75%,rgba(255,255,255,.06) 75%) -8px 0/16px 16px,#1a1a1d}
+    #cmt-gen .stage.exporting{background:transparent!important}#cmt-gen .stage-scale{max-width:100%;transform-origin:center}
+    #cmt-gen .content-wrap{display:inline-flex;background:#fff;border-radius:14px;padding:14px 18px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+    #cmt-gen .exporting .content-wrap{background:transparent;box-shadow:none;padding:0}
+
+    #cmt-gen .card{display:none;gap:12px;align-items:flex-start;max-width:100%;transition:opacity .15s,transform .15s}.card.active{display:flex;opacity:1;transform:scale(1)}
+    #cmt-gen .avatar{border-radius:50%;overflow:hidden;display:flex;align-items:center;justify-content:center;font-weight:800;flex:0 0 auto}.avatar img{width:100%;height:100%;object-fit:cover}.initial{line-height:1}
+    #cmt-gen .body{flex:1;min-width:0}.text{white-space:pre-wrap}.meta{display:flex;align-items:center}.likes{display:inline-flex;align-items:center;gap:8px}.likes svg{width:22px;height:22px}
+
+    #cmt-gen .standard{background:#fff;color:#0f172a;border-radius:28px;box-shadow:0 14px 36px rgba(0,0,0,.22);padding:16px 22px;gap:14px}.standard .avatar{width:46px;height:46px}.standard .initial{font-size:28px}.standard .name{color:#6b7280;font-weight:800}.standard .text{margin-top:6px;line-height:1.35;font-size:18px}.standard .meta{margin-top:10px;justify-content:space-between;color:#6b7280;font-weight:600}.standard .meta-left{display:flex;gap:8px;align-items:center}
+    #cmt-gen .youtube{font-family:Roboto,Arial,sans-serif;color:#0f0f0f;background:transparent;padding:8px 4px}.youtube .avatar{width:40px;height:40px}.youtube .initial{font-size:18px;color:#fff}.youtube .top{display:flex;gap:6px;align-items:baseline;flex-wrap:wrap}.youtube .name{font-size:13px;font-weight:500}.youtube .when,.youtube .meta{font-size:12px;color:#606060}.youtube .text{margin-top:2px;font-size:14px;line-height:1.4}.youtube .meta{margin-top:8px;gap:16px}.youtube .yt-action{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:500}.youtube .yt-action svg{width:18px;height:18px;stroke:#606060}.youtube .reply{text-transform:uppercase;font-size:12px;font-weight:700;letter-spacing:.3px;color:#606060}
+    #cmt-gen .instagram{font-family:-apple-system,Helvetica,Arial,sans-serif;color:#262626;background:transparent;padding:6px 4px}.instagram .avatar{width:32px;height:32px}.instagram .initial{font-size:14px;color:#fff}.instagram .text-line{font-size:14px;line-height:1.45}.instagram .name{font-weight:600;margin-right:5px}.instagram .meta{margin-top:6px;gap:14px;color:#8e8e8e;font-size:12px}.instagram .reply{font-weight:600}.instagram .heart-col{display:flex;flex-direction:column;align-items:center;gap:3px;padding-top:4px}.instagram .heart-col svg{width:13px;height:13px;stroke:#262626;fill:none}.instagram .heart-col span{font-size:11px;color:#8e8e8e}
+    #cmt-gen .tiktok{background:#fff;color:#161823;border-radius:14px;padding:14px 18px;box-shadow:0 8px 24px rgba(0,0,0,.18)}.tiktok .avatar{width:42px;height:42px}.tiktok .initial{font-size:22px;color:#fff}.tiktok .name{font-size:13px;font-weight:600;opacity:.55}.tiktok .text{margin-top:4px;font-size:15px;line-height:1.4}.tiktok .meta{margin-top:8px;justify-content:space-between;opacity:.55;font-size:12px;font-weight:500}.tiktok .meta-left{display:flex;gap:8px;align-items:center}.tiktok .likes{flex-direction:column;gap:2px}.tiktok .likes svg{width:18px;height:18px}.tiktok .likes span{font-size:11px}
+
+    #cmt-gen .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(12px);background:var(--ink);color:#0a0a0c;font-weight:700;font-size:13px;padding:10px 16px;border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,.4);opacity:0;pointer-events:none;transition:.2s;z-index:9999}
+    #cmt-gen .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}#cmt-gen [data-only]{display:none}
+  </style>
+
+  <div class="shell">
+    <div class="header"><span class="dot-ui"></span><div><h1>Generatore Commento Social</h1><p>Scegli lo stile, personalizza e scarica l'immagine in PNG</p></div></div>
+
+    <div class="layout">
+      <div class="panel">
+        <div class="platforms" id="platforms">
+          <button class="platform-btn active" type="button" data-p="standard"><span class="ic-wrap">▣</span>Standard</button>
+          <button class="platform-btn" type="button" data-p="youtube"><span class="ic-wrap">▶</span>YouTube</button>
+          <button class="platform-btn" type="button" data-p="instagram"><span class="ic-wrap">◎</span>Instagram</button>
+          <button class="platform-btn" type="button" data-p="tiktok"><span class="ic-wrap">♪</span>TikTok</button>
+        </div>
+
+        <div class="group">
+          <div class="group-title">Profilo</div>
+          <div class="field"><label>Nome utente</label><input type="text" id="name" value="LAEMY" placeholder="es. MARIO_98"></div>
+          <div class="field"><label>Foto profilo (opzionale)</label>
+            <div class="file-drop">
+              <span class="upload-ic">↑</span><span class="file-text"><b>Carica immagine</b> oppure usa iniziali</span>
+              <button class="clear-avatar" id="clearAvatar" type="button">Rimuovi</button><input type="file" id="avatar" accept="image/*">
+            </div>
+          </div>
+        </div>
+
+        <div class="group">
+          <div class="group-title">Commento</div>
+          <div class="field"><label>Testo</label><textarea id="text" placeholder="Scrivi il commento...">Ma scusa dopo che fai queste pokè
+le butti?</textarea></div>
+          <div class="grid-2">
+            <div class="field"><label>Data</label><input type="text" id="date" value="8-2" placeholder="es. 8-2"></div>
+            <div class="field"><label>Like</label><input type="text" id="likes" value="15" placeholder="es. 15"></div>
+          </div>
+          <div class="field" data-only="youtube"><label>Dislike (solo YouTube)</label><input type="text" id="dislikes" value="0" placeholder="es. 0"></div>
+        </div>
+
+        <div class="group">
+          <div class="group-title">Dimensioni immagine</div>
+          <div class="field"><div class="range-row"><label>Larghezza</label><input type="range" id="widthPx" min="400" max="1400" value="986"><span class="range-val" id="widthVal">986 px</span></div></div>
+          <div class="field"><div class="range-row"><label>Altezza</label><input type="range" id="heightPx" min="120" max="700" value="272"><span class="range-val" id="heightVal">272 px</span></div></div>
+        </div>
+
+        <div class="actions">
+          <button class="btn primary" id="randomize" type="button">↝ Randomizza</button>
+          <button class="btn ghost" id="resetBtn" type="button">↺ Reset</button>
+        </div>
+        <button class="btn download" id="download" type="button">↓ Scarica PNG</button>
+      </div>
+
+      <div class="preview-col">
+        <div class="preview-panel" id="previewPanel">
+          <div class="badge"><span class="live"></span>Anteprima live</div><div class="size-tag" id="sizeTag">986×272</div>
+          <div class="stage" id="stage"><div class="stage-scale" id="stageScale"><div id="cardMount"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="toast" id="toast">PNG scaricata ✓</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script>
+  (()=>{
+    const root=document.getElementById('cmt-gen');
+    const $=s=>root.querySelector(s), $$=s=>[...root.querySelectorAll(s)];
+    const ui={
+      name:$('#name'),text:$('#text'),date:$('#date'),likes:$('#likes'),dislikes:$('#dislikes'),avatar:$('#avatar'),
+      width:$('#widthPx'),height:$('#heightPx'),widthVal:$('#widthVal'),heightVal:$('#heightVal'),size:$('#sizeTag'),
+      stage:$('#stage'),scale:$('#stageScale'),panel:$('#previewPanel'),mount:$('#cardMount'),download:$('#download'),toast:$('#toast')
+    };
+
+    const DEFAULTS={name:'LAEMY',date:'8-2',likes:'15',dislikes:'0',text:'Ma scusa dopo che fai queste pokè\nle butti?',width:986,height:272};
+    const platforms=['standard','youtube','instagram','tiktok'];
+    let platform='standard', hue=Math.floor(Math.random()*360), avatarUrl=null;
+
+    const icons={
+      heart:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>',
+      like:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z"/></svg>',
+      dislike:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform:scale(-1)"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z"/></svg>'
+    };
+
+    const val=()=>{
+      const name=(ui.name.value.trim()||'Utente');
+      return {name,text:ui.text.value||'',date:ui.date.value.trim(),likes:ui.likes.value.trim()||'0',dislikes:ui.dislikes.value.trim()||'0',
+        yt:name.startsWith('@')?name:'@'+name.toLowerCase().replace(/\s+/g,''),ig:name.toLowerCase().replace(/\s+/g,'')};
+    };
+    const initials=n=>(n||'U').replace('@','').split(' ').map(x=>x[0]||'').slice(0,2).join('').toUpperCase();
+    const avatar=n=>avatarUrl?`<div class="avatar"><img src="${avatarUrl}" alt="avatar"></div>`:`<div class="avatar" style="background:hsl(${hue} 80% 55%)"><span class="initial" style="color:hsl(${hue} 80% 28%)">${initials(n)}</span></div>`;
+
+    const renderers={
+      standard:d=>`<div class="card standard active">${avatar(d.name)}<div class="body"><div class="name">${esc(d.name)}</div><div class="text">${esc(d.text)}</div><div class="meta"><div class="meta-left"><span>${esc(d.date)}</span><span>·</span><span>Rispondi</span></div><div class="likes">${icons.heart}<span>${esc(d.likes)}</span></div></div></div></div>`,
+      youtube:d=>`<div class="content-wrap"><div class="card youtube active">${avatar(d.name)}<div class="body"><div class="top"><span class="name">${esc(d.yt)}</span><span class="when">${esc(d.date)}</span></div><div class="text">${esc(d.text)}</div><div class="meta"><span class="yt-action">${icons.like}<span>${esc(d.likes)}</span></span><span class="yt-action">${icons.dislike}</span><span class="reply">Rispondi</span></div></div></div></div>`,
+      instagram:d=>`<div class="content-wrap"><div class="card instagram active">${avatar(d.name)}<div class="body"><div class="text-line"><span class="name">${esc(d.ig)}</span><span class="text">${esc(d.text)}</span></div><div class="meta"><span>${esc(d.date)}</span><span class="reply">Rispondi</span></div></div><div class="heart-col">${icons.heart}<span>${esc(d.likes)}</span></div></div></div>`,
+      tiktok:d=>`<div class="card tiktok active">${avatar(d.name)}<div class="body"><div class="name">${esc(d.name)}</div><div class="text">${esc(d.text)}</div><div class="meta"><div class="meta-left"><span>${esc(d.date)}</span><span>·</span><span>Rispondi</span></div><div class="likes">${icons.heart}<span>${esc(d.likes)}</span></div></div></div></div>`
+    };
+
+    function esc(s){return String(s).replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m])).replace(/\n/g,'<br>')}
+    function update(){
+      ui.mount.innerHTML=renderers[platform](val());
+      const w=+ui.width.value,h=+ui.height.value;
+      root.style.setProperty('--stage-w',w+'px');root.style.setProperty('--stage-h',h+'px');
+      ui.widthVal.textContent=w+' px';ui.heightVal.textContent=h+' px';ui.size.textContent=`${w}×${h}`;
+      fit();
+    }
+    function fit(){
+      const scale=Math.min(1,(ui.panel.clientWidth-40)/(+ui.width.value));
+      ui.scale.style.transform=`scale(${scale})`;ui.stage.style.height=(+ui.height.value*scale)+'px';
+    }
+    function setPlatform(p){
+      platform=p;$$('.platform-btn').forEach(b=>b.classList.toggle('active',b.dataset.p===p));
+      $$('[data-only]').forEach(el=>el.style.display=el.dataset.only===p?'block':'none');update();
+    }
+    function rnd(min,max){return Math.floor(Math.random()*(max-min+1))+min}
+    function randomName(){const a=['laura','mario','sofia','nicolo','giulia','irene','tommi','andre','federico','chiara','kevin','mattia','samuele','giada','alex','leon','francy','bea','nico','vale'];const s=['_','.', '', 'x','__','-'];const t=['01','2000','98','_tv','real','official','_yt','pro','_design','_it','x',''];return a[rnd(0,a.length-1)]+s[rnd(0,s.length-1)]+t[rnd(0,t.length-1)]}
+    function randomDate(){const d=new Date(Date.now()-rnd(0,30)*864e5);return `${d.getDate()}-${d.getMonth()+1}`}
+    function toast(msg){ui.toast.textContent=msg;ui.toast.classList.add('show');setTimeout(()=>ui.toast.classList.remove('show'),1800)}
+
+    $('#platforms').addEventListener('click',e=>{const b=e.target.closest('.platform-btn');if(b)setPlatform(b.dataset.p)});
+    [ui.name,ui.text,ui.date,ui.likes,ui.dislikes,ui.width,ui.height].forEach(x=>x.addEventListener('input',update));
+    ui.avatar.addEventListener('change',e=>{const f=e.target.files[0];if(!f){avatarUrl=null;return update()}const r=new FileReader();r.onload=()=>{avatarUrl=r.result;update()};r.readAsDataURL(f)});
+    $('#clearAvatar').addEventListener('click',e=>{e.preventDefault();e.stopPropagation();ui.avatar.value='';avatarUrl=null;update()});
+    $('#randomize').addEventListener('click',()=>{ui.name.value=randomName();ui.date.value=randomDate();ui.likes.value=rnd(0,2000);ui.dislikes.value=rnd(0,50);hue=rnd(0,359);avatarUrl=null;ui.avatar.value='';update()});
+    $('#resetBtn').addEventListener('click',()=>{Object.entries(DEFAULTS).forEach(([k,v])=>ui[k]&&(ui[k].value=v));avatarUrl=null;ui.avatar.value='';update()});
+    ui.download.addEventListener('click',async()=>{
+      const oldTransform=ui.scale.style.transform, oldHeight=ui.stage.style.height;
+      ui.download.disabled=true;ui.download.textContent='Genero PNG...';ui.scale.style.transform='none';ui.stage.style.height=ui.height.value+'px';ui.stage.classList.add('exporting');
+      try{
+        const canvas=await html2canvas(ui.stage,{backgroundColor:null,scale:2,useCORS:true});
+        canvas.toBlob(blob=>{const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='comment-'+platform+'.png';a.click();URL.revokeObjectURL(a.href);toast('PNG scaricata ✓')});
+      }catch(err){toast('Errore download PNG')}
+      finally{ui.stage.classList.remove('exporting');ui.scale.style.transform=oldTransform;ui.stage.style.height=oldHeight;ui.download.disabled=false;ui.download.textContent='↓ Scarica PNG';fit()}
+    });
+    window.addEventListener('resize',fit);setPlatform('standard');
+  })();
+  </script>
+</div>
